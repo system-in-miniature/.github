@@ -1,0 +1,13 @@
+{
+  "name": "System-in-Miniature Python CI",
+  "description": "Run the shared uv and pytest checks on Python 3.12 and 3.13.",
+  "iconName": "octicon beaker",
+  "categories": [
+    "Continuous integration",
+    "Python"
+  ],
+  "filePatterns": [
+    "^pyproject\\.toml$",
+    "^uv\\.lock$"
+  ]
+}

@@ -1,0 +1,67 @@
+name: Semantic divergence / 语义偏差
+description: Report a mismatch between a mini implementation and the real system / 报告教学实现与真实系统之间的语义不一致
+title: "[Semantic Divergence / 语义偏差] "
+labels:
+  - semantic-divergence
+  - "priority: highest"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Semantic divergence is the highest-priority issue type in this series.
+        语义偏差是本系列最高优先级的 issue 类型。
+
+  - type: textarea
+    id: mini-behavior
+    attributes:
+      label: Mini implementation behavior / 本项目行为
+      description: Describe what this project does, including a minimal reproducible example if possible. / 请描述本项目的实际行为，并尽可能提供最小复现。
+      placeholder: What happens in the mini implementation? / 教学实现中发生了什么？
+    validations:
+      required: true
+
+  - type: textarea
+    id: real-system-behavior
+    attributes:
+      label: Real system behavior / 真实系统行为
+      description: Describe the corresponding production-system semantics and link authoritative evidence. / 请描述对应生产系统的语义，并链接权威依据。
+      placeholder: What does the real system do instead? / 真实系统的行为是什么？
+    validations:
+      required: true
+
+  - type: dropdown
+    id: documentation-status
+    attributes:
+      label: Documentation status / 文档声明状态
+      description: Is this difference already declared in the mapping or differences documentation? / mapping 或 differences 文档是否已声明此差异？
+      options:
+        - Not declared / 未声明
+        - Declared but inaccurate or incomplete / 已声明但不准确或不完整
+        - Clearly and accurately declared / 已清楚且准确地声明
+        - Unsure / 不确定
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and references / 证据与参考资料
+      description: Add commands, output, source locations, official documentation, specifications, or upstream tests. / 请附命令、输出、源码位置、官方文档、规范或上游测试。
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Teaching impact / 教学影响
+      description: Explain what incorrect conclusion a reader could draw. / 请说明读者可能因此形成什么错误认知。
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checks / 提交前检查
+      options:
+        - label: I distinguished a semantic mismatch from a deliberately omitted feature. / 我已区分语义不一致与有意省略的功能。
+          required: true

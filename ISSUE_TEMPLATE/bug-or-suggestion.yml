@@ -1,0 +1,51 @@
+name: Bug or suggestion / 问题或建议
+description: Report an ordinary bug or propose a focused improvement / 报告普通问题或提出聚焦的改进建议
+title: "[Bug / Suggestion / 问题或建议] "
+labels:
+  - triage
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Issue type / 类型
+      options:
+        - Bug / 问题
+        - Suggestion / 建议
+        - Documentation / 文档
+        - Question / 问题咨询
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary / 摘要
+      description: State the problem or proposed improvement clearly. / 请清楚描述问题或改进建议。
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or example / 复现步骤或示例
+      description: For bugs, provide the smallest reproducible steps; for suggestions, show the intended use case. / 若为问题，请提供最小复现；若为建议，请说明目标使用场景。
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected outcome / 期望结果
+      description: What did you expect to happen, or what outcome should the suggestion enable? / 你期望发生什么，或该建议应实现什么结果？
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: Include the project version or commit, Python version, OS, and relevant commands. / 请提供项目版本或 commit、Python 版本、操作系统及相关命令。
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context / 补充信息
+      description: Add logs, screenshots, links, or alternatives you considered. / 可补充日志、截图、链接或考虑过的替代方案。
